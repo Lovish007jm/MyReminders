@@ -16,8 +16,7 @@ render(){
 const styles = StyleSheet.create({
   headerStyle:{
     height:50,
-    backgroundColor:'#EEEEEE',
-    color: '#EEEEEE',
+    backgroundColor: '#EEEEEE',
     elevation:2,
   },
 });
