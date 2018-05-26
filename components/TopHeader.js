@@ -1,13 +1,20 @@
 import  React, { Component } from 'react';
-import { Text, View, StyleSheet } from 'react-native';
-
+import { Text, View, StyleSheet,Image,TouchableOpacity } from 'react-native';
+import  HeaderButton  from './HeaderButton';
+import HeaderCenterComp from './HeaderCenterComp';
 class TopHeader extends Component{
 
 render(){
-  const { headerStyle } = styles;
+  const { headerStyle,searchBtnStyle } = styles;
       return(
+
         <View style={ headerStyle }>
-          <Text> Title </Text>
+          
+          <HeaderButton/>
+          <HeaderCenterComp/>
+          <TouchableOpacity>
+                <Image style ={ searchBtnStyle} source={require('../images/search.png')}/>
+            </TouchableOpacity>
         </View>
       );
     }
@@ -15,11 +22,19 @@ render(){
 
 const styles = StyleSheet.create({
   headerStyle:{
-    height:50,
-    backgroundColor:'#EEEEEE',
-    color: '#EEEEEE',
+    height:45,
+    backgroundColor:'#252728',
     elevation:2,
+    padding:5,
+    flexDirection:'row',
+    justifyContent:'flex-start',
+    alignItems:'center',
+  
   },
+  searchBtnStyle:{
+    width:25,
+    height:25
+}
 });
 
 export default TopHeader;
